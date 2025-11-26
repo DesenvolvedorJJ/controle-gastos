@@ -38,6 +38,6 @@ if __name__ == '__main__':
     
     if wait_for_db():
         init_db()
-        port = int(os.getenv('PORT', 8080))
+        port = int(os.getenv('PORT', 5000))
         print(f"🌐 Servidor rodando na porta {port}")
         app.run(host='0.0.0.0', port=port, debug=False)

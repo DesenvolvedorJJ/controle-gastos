@@ -1,0 +1,223 @@
+$ fly logs -a controle-gastos
+
+Waiting for logs...
+
+2025-11-26T18:26:02.916 proxy[56837932c61338] gru [info] machine started in 1.286143521s
+
+2025-11-26T18:26:03.194 app[56837932c61338] gru [info] 2025/11/26 18:26:03 INFO SSH listening listen_address=[fdaa:36:789a:a7b:5c5:2fa9:bf91:2]:22
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] Traceback (most recent call last):
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] File "/app/run.py", line 6, in <module>
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] app = create_app(os.getenv('FLASK_ENV', 'development'))
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] File "/app/app/__init__.py", line 17, in create_app
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] db.init_app(app)
+
+2025-11-26T18:26:03.793 app[56837932c61338] gru [info] File "/usr/local/lib/python3.11/site-packages/flask_sqlalchemy/extension.py", line 355, in init_app
+
+2025-11-26T18:26:03.794 app[56837932c61338] gru [info] raise RuntimeError(
+
+2025-11-26T18:26:03.794 app[56837932c61338] gru [info] RuntimeError: Either 'SQLALCHEMY_DATABASE_URI' or 'SQLALCHEMY_BINDS' must be set.
+
+2025-11-26T18:26:04.698 app[56837932c61338] gru [info] INFO Main child exited normally with code: 1
+
+2025-11-26T18:26:04.721 app[56837932c61338] gru [info] INFO Starting clean up.
+
+2025-11-26T18:26:04.817 app[56837932c61338] gru [info] [ 2.981802] reboot: Restarting system
+
+2025-11-26T18:26:05.135 runner[56837932c61338] gru [info] machine has reached its max restart count of 10
+
+2025-11-26T18:26:08.336 proxy[56837932c61338] gru [info] waiting for machine to be reachable on 0.0.0.0:5000 (waited 5.419429373s so far)
+
+2025-11-26T18:26:13.302 proxy[56837932c61338] gru [error] [PM05] failed to connect to machine: gave up after 15 attempts (in 10.385473175s)
+
+2025-11-26T18:26:29.985 proxy[56837932c61338] gru [info] Starting machine
+
+2025-11-26T18:26:30.114 app[56837932c61338] gru [info] 2025-11-26T18:26:30.114601034 [01KB0NZ7EN772K58DTV9F4YMJT:main] Running Firecracker v1.12.1
+
+2025-11-26T18:26:30.114 app[56837932c61338] gru [info] 2025-11-26T18:26:30.114741957 [01KB0NZ7EN772K58DTV9F4YMJT:main] Listening on API socket ("/fc.sock").
+
+2025-11-26T18:26:30.975 app[56837932c61338] gru [info] INFO Starting init (commit: 6f59af0a)...
+
+2025-11-26T18:26:31.045 app[56837932c61338] gru [info] INFO Preparing to run: `python run.py` as root
+
+2025-11-26T18:26:31.052 app[56837932c61338] gru [info] INFO [fly api proxy] listening at /.fly/api
+
+2025-11-26T18:26:31.085 runner[56837932c61338] gru [info] Machine started in 1.062s
+
+2025-11-26T18:26:31.091 proxy[56837932c61338] gru [info] machine started in 1.106360432s
+
+2025-11-26T18:26:31.627 app[56837932c61338] gru [info] 2025/11/26 18:26:31 INFO SSH listening listen_address=[fdaa:36:789a:a7b:5c5:2fa9:bf91:2]:22
+
+2025-11-26T18:26:32.181 app[56837932c61338] gru [info] Traceback (most recent call last):
+
+2025-11-26T18:26:32.181 app[56837932c61338] gru [info] File "/app/run.py", line 6, in <module>
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] app = create_app(os.getenv('FLASK_ENV', 'development'))
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] File "/app/app/__init__.py", line 17, in create_app
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] db.init_app(app)
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] File "/usr/local/lib/python3.11/site-packages/flask_sqlalchemy/extension.py", line 355, in init_app
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] raise RuntimeError(
+
+2025-11-26T18:26:32.182 app[56837932c61338] gru [info] RuntimeError: Either 'SQLALCHEMY_DATABASE_URI' or 'SQLALCHEMY_BINDS' must be set.
+
+2025-11-26T18:26:33.063 app[56837932c61338] gru [info] INFO Main child exited normally with code: 1
+
+2025-11-26T18:26:33.078 app[56837932c61338] gru [info] INFO Starting clean up.
+
+2025-11-26T18:26:33.573 app[56837932c61338] gru [info] [ 3.390167] reboot: Restarting system
+
+2025-11-26T18:26:33.853 runner[56837932c61338] gru [info] machine has reached its max restart count of 10
+
+2025-11-26T18:29:13.678 proxy[56837932c61338] gru [info] Starting machine
+
+2025-11-26T18:29:13.827 app[56837932c61338] gru [info] 2025-11-26T18:29:13.827761629 [01KB0NZ7EN772K58DTV9F4YMJT:main] Running Firecracker v1.12.1
+
+2025-11-26T18:29:13.828 app[56837932c61338] gru [info] 2025-11-26T18:29:13.828000763 [01KB0NZ7EN772K58DTV9F4YMJT:main] Listening on API socket ("/fc.sock").
+
+2025-11-26T18:29:15.385 app[56837932c61338] gru [info] INFO Starting init (commit: 6f59af0a)...
+
+2025-11-26T18:29:15.552 app[56837932c61338] gru [info] INFO Preparing to run: `python run.py` as root
+
+2025-11-26T18:29:15.559 app[56837932c61338] gru [info] INFO [fly api proxy] listening at /.fly/api
+
+2025-11-26T18:29:15.843 runner[56837932c61338] gru [info] Machine started in 2.003s
+
+2025-11-26T18:29:15.849 proxy[56837932c61338] gru [info] machine started in 2.170392573s
+
+2025-11-26T18:29:21.586 proxy[56837932c61338] gru [info] waiting for machine to be reachable on 0.0.0.0:5000 (waited 5.736781057s so far)
+
+2025-11-26T18:29:22.024 app[56837932c61338] gru [info] 2025/11/26 18:29:21 INFO SSH listening listen_address=[fdaa:36:789a:a7b:5c5:2fa9:bf91:2]:22
+
+2025-11-26T18:29:24.744 proxy[56837932c61338] gru [error] [PM05] failed to connect to machine: gave up after 15 attempts (in 8.895349995s)
+
+2025-11-26T18:29:25.547 proxy[56837932c61338] gru [error] [PC01] instance refused connection. is your app listening on 0.0.0.0:5000? make sure it is not only listening on 127.0.0.1 (hint: look at your startup logs, servers often print the address they are listening on)
+
+2025-11-26T18:29:31.864 app[56837932c61338] gru [info] Traceback (most recent call last):
+
+2025-11-26T18:29:31.864 app[56837932c61338] gru [info] File "/app/run.py", line 6, in <module>
+
+2025-11-26T18:29:31.864 app[56837932c61338] gru [info] app = create_app(os.getenv('FLASK_ENV', 'development'))
+
+2025-11-26T18:29:31.865 app[56837932c61338] gru [info] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-26T18:29:31.865 app[56837932c61338] gru [info] File "/app/app/__init__.py", line 17, in create_app
+
+2025-11-26T18:29:31.865 app[56837932c61338] gru [info] db.init_app(app)
+
+2025-11-26T18:29:31.865 app[56837932c61338] gru [info] File "/usr/local/lib/python3.11/site-packages/flask_sqlalchemy/extension.py", line 355, in init_app
+
+2025-11-26T18:29:31.865 app[56837932c61338] gru [info] raise RuntimeError(
+
+2025-11-26T18:29:31.865 app[56837932c61338] gru [info] RuntimeError: Either 'SQLALCHEMY_DATABASE_URI' or 'SQLALCHEMY_BINDS' must be set.
+
+2025-11-26T18:29:36.386 app[56837932c61338] gru [info] INFO Main child exited normally with code: 1
+
+2025-11-26T18:29:36.405 app[56837932c61338] gru [info] INFO Starting clean up.
+
+2025-11-26T18:29:36.411 app[56837932c61338] gru [info] [ 22.509470] reboot: Restarting system
+
+2025-11-26T18:29:36.639 runner[56837932c61338] gru [info] machine has reached its max restart count of 10
+
+2025-11-26T18:29:50.352 proxy[56837932c61338] gru [info] Starting machine
+
+2025-11-26T18:29:50.526 app[56837932c61338] gru [info] 2025-11-26T18:29:50.526402949 [01KB0NZ7EN772K58DTV9F4YMJT:main] Running Firecracker v1.12.1
+
+2025-11-26T18:29:50.526 app[56837932c61338] gru [info] 2025-11-26T18:29:50.526621153 [01KB0NZ7EN772K58DTV9F4YMJT:main] Listening on API socket ("/fc.sock").
+
+2025-11-26T18:29:52.191 app[56837932c61338] gru [info] INFO Starting init (commit: 6f59af0a)...
+
+2025-11-26T18:29:52.427 app[56837932c61338] gru [info] INFO Preparing to run: `python run.py` as root
+
+2025-11-26T18:29:52.436 app[56837932c61338] gru [info] INFO [fly api proxy] listening at /.fly/api
+
+2025-11-26T18:29:52.649 runner[56837932c61338] gru [info] Machine started in 2.146s
+
+2025-11-26T18:29:52.656 proxy[56837932c61338] gru [info] machine started in 2.304238113s
+
+2025-11-26T18:29:57.906 proxy[56837932c61338] gru [info] waiting for machine to be reachable on 0.0.0.0:5000 (waited 5.250217142s so far)
+
+2025-11-26T18:30:02.105 proxy[56837932c61338] gru [error] [PM05] failed to connect to machine: gave up after 15 attempts (in 9.44888312s)
+
+2025-11-26T18:30:02.423 app[56837932c61338] gru [info] 2025/11/26 18:30:02 INFO SSH listening listen_address=[fdaa:36:789a:a7b:5c5:2fa9:bf91:2]:22
+
+2025-11-26T18:30:06.186 proxy[56837932c61338] gru [error] [PC01] instance refused connection. is your app listening on 0.0.0.0:5000? make sure it is not only listening on 127.0.0.1 (hint: look at your startup logs, servers often print the address they are listening on)
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] Traceback (most recent call last):
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] File "/app/run.py", line 6, in <module>
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] app = create_app(os.getenv('FLASK_ENV', 'development'))
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] File "/app/app/__init__.py", line 17, in create_app
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] db.init_app(app)
+
+2025-11-26T18:30:14.665 app[56837932c61338] gru [info] File "/usr/local/lib/python3.11/site-packages/flask_sqlalchemy/extension.py", line 355, in init_app
+
+2025-11-26T18:30:14.666 app[56837932c61338] gru [info] raise RuntimeError(
+
+2025-11-26T18:30:14.666 app[56837932c61338] gru [info] RuntimeError: Either 'SQLALCHEMY_DATABASE_URI' or 'SQLALCHEMY_BINDS' must be set.
+
+2025-11-26T18:30:17.426 app[56837932c61338] gru [info] INFO Main child exited normally with code: 1
+
+2025-11-26T18:30:17.463 app[56837932c61338] gru [info] INFO Starting clean up.
+
+2025-11-26T18:30:17.466 app[56837932c61338] gru [info] [ 26.843410] reboot: Restarting system
+
+2025-11-26T18:30:17.637 runner[56837932c61338] gru [info] machine has reached its max restart count of 10
+
+2025-11-26T18:30:33.188 proxy[56837932c61338] gru [info] Starting machine
+
+2025-11-26T18:30:33.323 app[56837932c61338] gru [info] 2025-11-26T18:30:33.323395698 [01KB0NZ7EN772K58DTV9F4YMJT:main] Running Firecracker v1.12.1
+
+2025-11-26T18:30:33.323 app[56837932c61338] gru [info] 2025-11-26T18:30:33.323533551 [01KB0NZ7EN772K58DTV9F4YMJT:main] Listening on API socket ("/fc.sock").
+
+2025-11-26T18:30:34.905 app[56837932c61338] gru [info] INFO Starting init (commit: 6f59af0a)...
+
+2025-11-26T18:30:35.383 app[56837932c61338] gru [info] INFO Preparing to run: `python run.py` as root
+
+2025-11-26T18:30:35.396 app[56837932c61338] gru [info] INFO [fly api proxy] listening at /.fly/api
+
+2025-11-26T18:30:35.752 runner[56837932c61338] gru [info] Machine started in 2.429s
+
+2025-11-26T18:30:35.758 proxy[56837932c61338] gru [info] machine started in 2.570361245s
+
+2025-11-26T18:30:41.346 proxy[56837932c61338] gru [info] waiting for machine to be reachable on 0.0.0.0:5000 (waited 5.587227242s so far)
+
+2025-11-26T18:30:43.384 app[56837932c61338] gru [info] 2025/11/26 18:30:43 INFO SSH listening listen_address=[fdaa:36:789a:a7b:5c5:2fa9:bf91:2]:22
+
+2025-11-26T18:30:44.505 proxy[56837932c61338] gru [error] [PM05] failed to connect to machine: gave up after 15 attempts (in 8.746194556s)
+
+2025-11-26T18:32:07.539 proxy[56837932c61338] gru [info] Starting machine
+
+2025-11-26T18:32:07.679 app[56837932c61338] gru [info] 2025-11-26T18:32:07.679165658 [01KB0NZ7EN772K58DTV9F4YMJT:main] Running Firecracker v1.12.1
+
+2025-11-26T18:32:07.679 app[56837932c61338] gru [info] 2025-11-26T18:32:07.679308493 [01KB0NZ7EN772K58DTV9F4YMJT:main] Listening on API socket ("/fc.sock").
+
+2025-11-26T18:32:09.223 app[56837932c61338] gru [info] INFO Starting init (commit: 6f59af0a)...
+
+2025-11-26T18:32:09.629 app[56837932c61338] gru [info] INFO Preparing to run: `python run.py` as root
+
+2025-11-26T18:32:09.704 app[56837932c61338] gru [info] INFO [fly api proxy] listening at /.fly/api
+
+2025-11-26T18:32:09.835 runner[56837932c61338] gru [info] Machine started in 2.164s
+
+2025-11-26T18:32:09.841 proxy[56837932c61338] gru [info] machine started in 2.302249463s
+
+2025-11-26T18:32:14.768 app[56837932c61338] gru [info] 2025/11/26 18:32:14 INFO SSH listening listen_address=[fdaa:36:789a:a7b:5c5:2fa9:bf91:2]:22
+
+2025-11-26T18:32:14.864 proxy[56837932c61338] gru [info] waiting for machine to be reachable on 0.0.0.0:5000 (waited 5.023360798s so far)
